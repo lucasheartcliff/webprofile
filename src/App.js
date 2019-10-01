@@ -2,16 +2,52 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import CustomButton from './components/button/Button';
+import Button from './components/button/Button';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <CustomButton type='' color='royal' >
+        <Button color='danger'>
           Hello World
-        </CustomButton>
+        </Button>
+        <Button color='royal'>
+          Hello World
+        </Button>
+        <Button color='info'>
+          Hello World
+        </Button>
+        <Button color='warning'>
+          Hello World
+        </Button>
+        <Button color='default'>
+          Hello World
+        </Button>
+        <Button color='light'>
+          Hello World
+        </Button>
+        <Button color='dark'>
+          Hello World
+        </Button>
+        <Button color='success'>
+          Hello World
+        </Button>
+        <Button color='rose'>
+          Hello World
+        </Button>
+        <Button color='facebook'>
+          Facebook
+        </Button>
+        <Button color='twitter'>
+          Twitter
+        </Button>
+        <Button color='google'>
+          Google
+        </Button>
+        <Button color='transparent'>
+          Transparent
+        </Button>
       </header>
     </div>
   );

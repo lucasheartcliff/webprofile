@@ -5,6 +5,14 @@ const successColor = "#4caf50";
 const infoColor = "#00acc1";
 const roseColor = "#e91e63";
 const grayColor = "#999999";
+const lightColor = "#FFFFFF";
+const darkColor = "#333333";
+
+/*Social Colors*/
+const twitterColor = "#55acee";
+const facebookColor = "#3b5998";
+const googleColor = "#cd0000";
+
 
 export {
     royalColor,
@@ -13,5 +21,10 @@ export {
     successColor,
     infoColor,
     roseColor,
-    grayColor
+    grayColor,
+    lightColor,
+    darkColor,
+    facebookColor,
+    twitterColor,
+    googleColor
 };

@@ -4,10 +4,10 @@ import classNames from "classnames";
 
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/styles';
-import buttonStyle from './buttonsStyles';
+import buttonStyles from './buttonStyles';
 
 const componentStyles = makeStyles(() => ({
-    ...buttonStyle
+    ...buttonStyles
 }));
 
 const CustomButton = (props) => {
@@ -22,8 +22,7 @@ const CustomButton = (props) => {
         block,
         link,
         justIcon,
-        className,
-        ...rest
+        className
     } = props;
     
     const classes = componentStyles();
@@ -43,7 +42,7 @@ const CustomButton = (props) => {
     });
 
     return(
-        <Button {...rest} className={btnClasses}>
+        <Button {...props} className={btnClasses}>
             {children}
         </Button>
     )
@@ -57,12 +56,11 @@ CustomButton.propTypes = {
         "warning",
         "danger",
         "rose",
-        "white",
+        "dark",
+        "light",
         "facebook",
         "twitter",
         "google",
-        "github",
-        "gitlab",
         "transparent"
     ]),
     size: PropTypes.oneOf(["sm", "lg"]),
