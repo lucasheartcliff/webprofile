@@ -36,15 +36,6 @@ function App() {
         <Button color='rose'>
           Hello World
         </Button>
-        <Button color='facebook'>
-          Facebook
-        </Button>
-        <Button color='twitter'>
-          Twitter
-        </Button>
-        <Button color='google'>
-          Google
-        </Button>
         <Button color='transparent'>
           Transparent
         </Button>

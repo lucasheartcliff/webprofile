@@ -12,6 +12,7 @@ const darkColor = "#333333";
 const twitterColor = "#55acee";
 const facebookColor = "#3b5998";
 const googleColor = "#cd0000";
+const dribbleColor = "#f90d4a";
 
 
 export {
@@ -26,5 +27,6 @@ export {
     darkColor,
     facebookColor,
     twitterColor,
-    googleColor
+    googleColor,
+    dribbleColor
 };

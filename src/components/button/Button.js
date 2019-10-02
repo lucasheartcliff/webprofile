@@ -58,9 +58,6 @@ CustomButton.propTypes = {
         "rose",
         "dark",
         "light",
-        "facebook",
-        "twitter",
-        "google",
         "transparent"
     ]),
     size: PropTypes.oneOf(["sm", "lg"]),
