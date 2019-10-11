@@ -5,27 +5,37 @@ import classNames from "classnames";
 import AppBar from '@material-ui/core/AppBar';
 import { makeStyles } from '@material-ui/styles';
 
-const componentStyles = makeStyles({
+import navbarStyles from './navbarStyles'
 
-});
+const componentStyles = makeStyles((theme)=> ({
+    ...navbarStyles
+}));
 
-const NavBar = (props) =>{
+const Navbar = (props) =>{
     const {
         color,
         position,
-        children
+        children,
+        className
     } = props;
 
     const classes = componentStyles();
 
+    const navbarClasses = classNames({
+        [classes.navbar]: true,
+        [classes[color]]: color,
+        [classes[position]]:position,
+        [className]: className
+    });
+
     return(
-        <AppBar {...props} className={classes}> 
+        <AppBar {...props} className={navbarClasses}> 
             {children}
         </AppBar>
     )
 }
 
-NavBar.prototype = {
+Navbar.prototype = {
     color: PropTypes.oneOf([
         "royal",
         "info",
@@ -41,4 +51,4 @@ NavBar.prototype = {
     className: PropTypes.string
 };
 
-export default NavBar;
+export default Navbar;
