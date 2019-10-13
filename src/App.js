@@ -1,32 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 import Button from './components/button/Button';
 import Container from './components/container/Container';
 import Navbar from './components/navbar/Navbar';
+import Sidebar from './components/sidebar/Sidebar';
 
 import IconButton from '@material-ui/core/IconButton';
-//import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from '@material-ui/icons/Menu';
 
-function App() {
+import { connect } from 'react-redux';
+
+const toggleTheme = (theme) =>{
+  if(theme === "light"){
+    theme = "dark";
+  } else {
+    theme = "light"
+  }
+  return{
+    type: "switchPrimaryTheme",
+    theme: theme
+  }
+}
+
+function App({ theme, dispatch }) {
+  console.log(theme);
   return (
-    <div className="App">
-      <header className="">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Navbar color="light">
-          <IconButton>
-            
-          </IconButton>
-          <Button color="rose">Something</Button>
-        </Navbar>
-        <Container color={"dark"}>
-          <Button color={"royal"}>Boa Noite</Button><br/>
-          <Button color={"light"}>Rapeize</Button>
-        </Container>
-      </header>
+    <div>
+      <Navbar color={theme.primary}>
+        <IconButton edge="start">
+          <MenuIcon />
+        </IconButton>
+
+      </Navbar>
+      <Sidebar>
+        <Button>Algo</Button>
+      </Sidebar>
+      <Container color={"light"}>
+        <Button color={"royal"}>Boa Noite</Button><br />
+        <Button color={"royal"} onClick={() => dispatch( toggleTheme(theme.primary) )}>Switch Theme</Button>
+      </Container>
     </div>
   );
 }
 
-export default App;
+export default connect(state => ({ theme: state }))(App);

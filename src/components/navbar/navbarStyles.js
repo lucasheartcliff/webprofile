@@ -1,10 +1,11 @@
 import { lightColor, darkColor } from '../../assets/jss/colors';
 
 const navbarStyles = {
+    root: {
+        flexGrow: 1,
+    },
     navbar:{
-        menuButton: {
-            marginRight: "10px",
-        },
+        flexGrow:1
     },
 
     light:{

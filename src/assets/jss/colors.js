@@ -1,4 +1,4 @@
-const royalColor = "#9c27b0";
+const royalColor = "#974fdb";
 const warningColor = "#ff9800";
 const dangerColor = "#f44336";
 const successColor = "#4caf50";

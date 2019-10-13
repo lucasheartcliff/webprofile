@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+
 import { makeStyles } from '@material-ui/styles';
 
 import navbarStyles from './navbarStyles'
@@ -30,7 +32,9 @@ const Navbar = (props) =>{
 
     return(
         <AppBar {...props} className={navbarClasses}> 
-            {children}
+            <Toolbar>
+                {children}
+            </Toolbar>
         </AppBar>
     )
 }
