@@ -1,9 +1,6 @@
 import { lightColor, darkColor } from '../../assets/jss/colors';
 
 const navbarStyles = {
-    root: {
-        flexGrow: 1,
-    },
     navbar:{
         flexGrow:1
     },

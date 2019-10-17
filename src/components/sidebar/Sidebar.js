@@ -1,35 +1,60 @@
 import React from 'react';
+import PropTypes from "prop-types";
+import classNames from "classnames";
+
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import { makeStyles } from '@material-ui/core';
+import sidebarStyles from './sidebarStyles';
 
-const drawerWidth = 240;
-
-const useStyles = makeStyles(theme => ({
-    drawer: {
-        width: drawerWidth,
-        flexShrink: 0,
-    },
-    drawerPaper: {
-        width: drawerWidth,
-    },
-    drawerHeader: {
-        display: 'flex',
-        alignItems: 'center',
-        padding: theme.spacing(0, 1),
-        ...theme.mixins.toolbar,
-        justifyContent: 'flex-end',
-    },
+const componentStyle = makeStyles(() => ({
+    ...sidebarStyles
 }))
 
 const Sidebar = (props) => {
-    const { children } = props;
-    const classes = useStyles();
+    const {
+        color,
+        anchor,
+        children,
+        open,
+        toggleSidebar,
+        className
+    } = props;
+
+    const classes = componentStyle();
+
+    const sidebarClasses = classNames({
+        [classes.sidebar]: true,
+        [classes[color]]: color,
+        [className]: className
+    });
 
     return (
-        <SwipeableDrawer open={true} variant="persistent" anchor="left" className={classes.drawer} classes={{paper: classes.drawerPaper}}>
+        <SwipeableDrawer open={open} onOpen={()=>toggleSidebar(true)} onClose={()=>toggleSidebar(false)} anchor={anchor} className={sidebarClasses} classes={{paper: sidebarClasses}}>
             {children}
         </SwipeableDrawer>
     );
+}
+
+Sidebar.prototype = {
+    color: PropTypes.oneOf([
+        "royal",
+        "info",
+        "success",
+        "warning",
+        "danger",
+        "rose",
+        "dark",
+        "light",
+        "transparent"
+    ]),
+    anchor: PropTypes.oneOf([
+        "left",
+        "right",
+        "top",
+        "bottom"
+    ]),
+    classNames: PropTypes.string,
+    open: PropTypes.boolean
 }
 
 export default Sidebar;

@@ -23,16 +23,23 @@ const toggleTheme = (theme) =>{
 }
 
 function App({ theme, dispatch }) {
-  console.log(theme);
+  const [state, setState] = React.useState({
+    sidebar: false
+  })
+
+  const toggleSidebar = (status) => {
+    setState({...state, sidebar: status});
+  }
+
   return (
     <div>
       <Navbar color={theme.primary}>
         <IconButton edge="start">
-          <MenuIcon />
+          <MenuIcon onClick={()=>toggleSidebar(true)}/>
         </IconButton>
-
       </Navbar>
-      <Sidebar>
+      
+      <Sidebar color={theme.primary} anchor={"left"} open={state.sidebar} toggleSidebar={() =>toggleSidebar()}>
         <Button>Algo</Button>
       </Sidebar>
       <Container color={"light"}>

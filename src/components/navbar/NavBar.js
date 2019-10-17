@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/styles';
 
 import navbarStyles from './navbarStyles'
 
-const componentStyles = makeStyles((theme)=> ({
+const componentStyles = makeStyles(()=> ({
     ...navbarStyles
 }));
 
