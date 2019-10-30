@@ -1,22 +1,31 @@
 import { createStore } from 'redux';
 
 const initialState = {
-    primary: "light",
+    primary: {
+        active: "light",
+        desactive: "dark"
+    },
     secondary:"royal"
 }
 
 const reducer = (state = initialState, action) => {
-    console.log(action);
+    console.log(action)
     if(action.theme === "light"){
         return{
             ...state,
-            primary: "light"
+            primary: {
+                active:"light",
+                desactive:"dark"
+            }
         };
     } else if(action.theme === "dark") {
         return{
             ...state,
-            primary: "dark"
-        }
+            primary: {
+                active:"dark",
+                desactive:"light"
+            }
+        };
     }
 
     return state;

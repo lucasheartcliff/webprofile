@@ -6,7 +6,7 @@ const infoColor = "#00acc1";
 const roseColor = "#e91e63";
 const grayColor = "#999999";
 const lightColor = "#FFFFFF";
-const darkColor = "#333333";
+const darkColor = "#444444";
 
 /*Social Colors*/
 const twitterColor = "#55acee";
