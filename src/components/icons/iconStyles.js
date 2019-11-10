@@ -7,48 +7,73 @@ import {
     roseColor,
     warningColor,
     successColor,
-    grayColor
+    grayColor,
+    githubColor,
+    twitterColor,
+    facebookColor,
+    googleColor,
+    dribbleColor
 } from '../../assets/jss/colors';
 
 const iconStyles = {
-    icon:{
+    icon: {
         color: grayColor
     },
 
-    light:{
+    light: {
         color: lightColor
     },
 
-    dark:{
+    dark: {
         color: darkColor
     },
 
-    info:{
+    info: {
         color: infoColor
     },
 
-    royal:{
+    royal: {
         color: royalColor
     },
 
-    danger:{
+    danger: {
         color: dangerColor
     },
 
-    warning:{
+    warning: {
         color: warningColor
     },
 
-    success:{
+    success: {
         color: successColor
     },
 
-    rose:{
+    rose: {
         color: roseColor
     },
 
-    gray:{
+    gray: {
         color: grayColor
+    },
+
+    twitter: {
+        color: twitterColor
+    },
+
+    facebook: {
+        color: facebookColor
+    },
+
+    github: {
+        color: githubColor
+    },
+
+    google: {
+        color: googleColor
+    },
+
+    dribble: {
+        color: dribbleColor
     }
 }
 

@@ -13,6 +13,7 @@ const twitterColor = "#55acee";
 const facebookColor = "#3b5998";
 const googleColor = "#cd0000";
 const dribbleColor = "#f90d4a";
+const githubColor = "#333333";
 
 
 export {
@@ -28,5 +29,6 @@ export {
     facebookColor,
     twitterColor,
     googleColor,
-    dribbleColor
+    dribbleColor,
+    githubColor
 };
